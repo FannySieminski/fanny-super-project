@@ -1,4 +1,110 @@
-h1 {
-  text-align: center;
-  color: blueviolet;
+.container {
+  display: block;
+  margin: 0 auto;
+  padding-left: 100px;
+  padding-top: 70px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.card {
+  border-color: #86c8fa;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+.main-card {
+  padding-left: 30px;
+}
+.preselected-cities {
+  color: #86c8fa;
+}
+.preselected-cities :hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.submit-button {
+  background-color: #86c8fa;
+  border: #86c8fa;
+  color: white;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border-radius: 4px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+.current-location {
+  background-color: rgb(23, 219, 88);
+  border: rgb(23, 219, 88);
+  color: white;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border-radius: 4px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+  left: 113px;
+}
+
+.city-time {
+  padding-left: 20px;
+  padding-bottom: 30px;
+}
+
+#current-city {
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.central-card {
+  position: relative;
+  left: 18px;
+}
+.icon-current-day {
+  font-size: 60px;
+  position: relative;
+  left: 40px;
+  top: 10px;
+}
+.temperature {
+  font-size: 50px;
+  position: relative;
+  left: 10px;
+}
+.units {
+  text-decoration: none;
+  font-size: 14px;
+  position: relative;
+  top: -25px;
+  left: -4px;
+}
+.current-weather {
+  position: relative;
+  left: 50px;
+  top: 7px;
+  list-style: none;
+}
+#description,
+#humidity,
+#wind,
+#clouds {
+  font-weight: bold;
+}
+.weather-day1,
+.weather-day2,
+.weather-day3,
+.weather-day4,
+.weather-day5 {
+  list-style: none;
+  padding-left: 10px;
+  padding-bottom: 10px;
+}
+.next-days {
+  position: relative;
+  left: 60px;
+}
+.icon-next-days {
+  font-size: 30px;
+}
+.footer {
+  font-size: 10px;
+  padding-top: 10px;
+  padding-left: 5px;
+}
+a {
+  color: #86c8fa;
 }

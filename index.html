@@ -4,11 +4,88 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-		<link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Fanny Super Project</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>Hello World!</h1>
-  </body>
-	<script src="script.js"></script>
+		 <div class="container">
+      <div class="card main-card"style="max-width: 750px;">
+          <div class="card-body">
+        <div class="row preselected-cities">
+          <div class="col-2">Paris</div>
+          <div class="col-2">Madrid</div>
+          <div class="col-2">New-York</div>
+          <div class="col-2">Los Angeles</div>
+        </div>
+        <br/>
+        <form id="enter-city">
+          <input type="text" id= "city-entered" placeholder="Enter a city..." autofocus="on" autocomplete="off" />
+          <span class="submit-button"><input class="submit-button" type="submit" value="Search" /></span><button class = "current-location">My current location</button></div>
+        </form>
+        <div class="city-time">
+<div id="current-city">Selected city </div><div id="currentTime"> Current time </div>
+        </div>
+        <div class="card mb-3 central-card" style="max-width: 650px;">
+          <div class="row g-0">
+            <div class="col-md-2">
+              <p><span class="icon-current-day">🌤</span><p/>
+            </div>
+            <div class="col-md-3">
+              <div class="card-body">
+        <div class="temperature"><span id="just-temp"<h4></h4> </span> <span class="units"> ºC </span> </div>
+              </div>
+            </div>
+                <div class="col-md-7">
+                    <ul class="current-weather">
+                        <li>Weather: <span id="description"> </span></li>
+                        <li>Humidity: <span id ="humidity"> </span> %</li>
+                        <li>Wind: <span id="wind"> </span> km/h</li>
+                        <li>Clouds: <span id="clouds"> </span> %</li>
+                      </ul>
+              </div>
+            </div>
+          </div>
+          <br />
+          <div class="row next-days">
+            <div class="col-2">Day+1
+            <ul class="weather-day1">
+              <li><span class="icon-next-days"> ☀️ </span> </li>
+              <li><span class="temperature-next-days">35ºc</span></li>
+            </ul></div>
+            <div class="col-2">Day+2
+            <ul class="weather-day2">
+              <li><span class="icon-next-days"> ☀️ </span></li>
+              <li><span class="temperature-next-days">36ºc</span></li>
+            </ul></div>
+            <div class="col-2">Day+3
+            <ul class="weather-day3">
+              <li><span class="icon-next-days"> ☀️ </span></li>
+              <li><span class="temperature-next-days">38ºc</span></li>
+            </ul></div>
+            <div class="col-2">Day+4
+            <ul class="weather-day4">
+              <li><span class="icon-next-days"> ☀️ </span></li>
+              <li><span class="temperature-next-days">37ºc</span></li>
+            </ul></div>
+            <div class="col-2">Day+5
+            <ul class="weather-day5">
+              <li><span class="icon-next-days"> ☀️ </span></li>
+              <li><span class="temperature-next-days">39ºc</span></li>
+            </ul></div>
+          </div>
+        </div>
+        <div class= footer>
+       Build by <a href="https://www.instagram.com/fanny_sieminski/?hl=fr" target="blanck">Fanny Sieminski </a>
+      </div></div>
+      </div>
+</div>
+	</body>
+  <script src="script.js"></script>
 </html>
