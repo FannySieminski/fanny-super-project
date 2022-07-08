@@ -66,20 +66,20 @@
   left: 10px;
 }
 .units {
-  text-decoration: none;
   font-size: 14px;
   position: relative;
   top: -25px;
   left: -4px;
+}
+#celcius,
+#fahrenheit {
+  text-decoration: none;
 }
 .current-weather {
   position: relative;
   left: 50px;
   top: 7px;
   list-style: none;
-}
-#description {
-  text-transform: capitalize;
 }
 #description,
 #humidity,
