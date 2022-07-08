@@ -48,6 +48,23 @@ function newWeather(response) {
   document.querySelector("#clouds").innerHTML = Math.round(
     response.data.clouds.all
   );
+  function changeCelcius(event) {
+    event.preventDefault();
+    let celciusInput = document.querySelector("#just-temp");
+    celciusInput.innerHTML = Math.round(response.data.main.temp);
+  }
+
+  let celciusTemp = document.querySelector("#celcius");
+  celciusTemp.addEventListener("click", changeCelcius);
+
+  function changeFahrenheit(event) {
+    event.preventDefault();
+    let fahrenheitInput = document.querySelector("#just-temp");
+    fahrenheitInput.innerHTML = Math.round(response.data.main.temp * 1.8 + 32);
+  }
+
+  let fahrenheitTemp = document.querySelector("#fahrenheit");
+  fahrenheitTemp.addEventListener("click", changeFahrenheit);
 }
 
 let searchedCity = document.querySelector("#enter-city");

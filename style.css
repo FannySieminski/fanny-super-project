@@ -78,6 +78,9 @@
   top: 7px;
   list-style: none;
 }
+#description{
+  text-transform: capitalize;
+}
 #description,
 #humidity,
 #wind,
