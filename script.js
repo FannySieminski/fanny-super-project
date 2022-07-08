@@ -34,6 +34,11 @@ function newCity(event) {
 }
 function newWeather(response) {
   document.querySelector("#current-city").innerHTML = response.data.name;
+  let iconElement = document.querySelector("#weather-icon");
+  iconElement.setAttribute =
+    ("src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+  iconElement.setAttribute = ("alt", response.data.weather[0].description);
   document.querySelector("#just-temp").innerHTML = Math.round(
     response.data.main.temp
   );
