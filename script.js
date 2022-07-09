@@ -34,10 +34,11 @@ function newCity(event) {
 }
 function newWeather(response) {
   let iconElement = document.querySelector("#icon");
-  iconElement.setAttribute =
-    ("src",
-    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
-  iconElement.setAttribute = ("alt", response.data.weather[0].description);
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
   document.querySelector("#current-city").innerHTML = response.data.name;
 
   document.querySelector("#just-temp").innerHTML = Math.round(
@@ -137,4 +138,4 @@ function losangelesSearched() {
 let losangelesCity = document.querySelector("#select-losangeles");
 losangelesCity.addEventListener("click", losangelesSearched);
 
-search("Madrid");
+search("madrid");
