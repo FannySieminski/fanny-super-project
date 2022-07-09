@@ -33,12 +33,13 @@ function newCity(event) {
   search(cityInput);
 }
 function newWeather(response) {
-  document.querySelector("#current-city").innerHTML = response.data.name;
-  let iconElement = document.querySelector("#weather-icon");
+  let iconElement = document.querySelector("#icon");
   iconElement.setAttribute =
     ("src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
   iconElement.setAttribute = ("alt", response.data.weather[0].description);
+  document.querySelector("#current-city").innerHTML = response.data.name;
+
   document.querySelector("#just-temp").innerHTML = Math.round(
     response.data.main.temp
   );
@@ -91,5 +92,49 @@ function getCurrentPosition() {
 
 let currentPositionButton = document.querySelector(".current-location");
 currentPositionButton.addEventListener("click", getCurrentPosition);
+
+function parisSearched() {
+  let apiKey = "c4d36cc9101ca41ceee2cff31c436ac9";
+  let units = "metric";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=paris&appid=${apiKey}&units=${units}`;
+
+  axios.get(apiUrl).then(newWeather);
+}
+
+let parisCity = document.querySelector("#select-paris");
+parisCity.addEventListener("click", parisSearched);
+
+function madridSearched() {
+  let apiKey = "c4d36cc9101ca41ceee2cff31c436ac9";
+  let units = "metric";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=madrid&appid=${apiKey}&units=${units}`;
+
+  axios.get(apiUrl).then(newWeather);
+}
+
+let madridCity = document.querySelector("#select-madrid");
+madridCity.addEventListener("click", madridSearched);
+
+function newyorkSearched() {
+  let apiKey = "c4d36cc9101ca41ceee2cff31c436ac9";
+  let units = "metric";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=new%20york&appid=${apiKey}&units=${units}`;
+
+  axios.get(apiUrl).then(newWeather);
+}
+
+let newyorkCity = document.querySelector("#select-newyork");
+newyorkCity.addEventListener("click", newyorkSearched);
+
+function losangelesSearched() {
+  let apiKey = "c4d36cc9101ca41ceee2cff31c436ac9";
+  let units = "metric";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=los%20angeles&appid=${apiKey}&units=${units}`;
+
+  axios.get(apiUrl).then(newWeather);
+}
+
+let losangelesCity = document.querySelector("#select-losangeles");
+losangelesCity.addEventListener("click", losangelesSearched);
 
 search("Madrid");

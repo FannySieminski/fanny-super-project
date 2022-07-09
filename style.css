@@ -29,15 +29,15 @@
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
 .current-location {
-  background-color: rgb(23, 219, 88);
-  border: rgb(23, 219, 88);
+  background-color: #86c8fa;
+  border: #86c8fa;
   color: white;
   padding-top: 4px;
   padding-bottom: 4px;
   border-radius: 4px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
   position: relative;
-  left: 113px;
+  left: 10px;
 }
 
 .city-time {
