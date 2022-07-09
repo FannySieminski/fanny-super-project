@@ -138,4 +138,4 @@ function losangelesSearched() {
 let losangelesCity = document.querySelector("#select-losangeles");
 losangelesCity.addEventListener("click", losangelesSearched);
 
-search("madrid");
+search("paris");
