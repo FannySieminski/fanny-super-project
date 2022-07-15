@@ -9,8 +9,8 @@
     rgb(204, 228, 247) 11.2%,
     rgb(237, 246, 250) 100.2%
   );
-  max-width: 1600px;
-  max-height: 1500px;
+  max-width: 2600px;
+  max-height: 3500px;
 }
 .card {
   border-color: #86c8fa;
@@ -94,21 +94,23 @@
 #clouds {
   font-weight: bold;
 }
-.weather-day1,
-.weather-day2,
-.weather-day3,
-.weather-day4,
-.weather-day5 {
-  list-style: none;
-  padding-left: 10px;
-  padding-bottom: 10px;
-}
+
 .next-days {
   position: relative;
   left: 60px;
 }
+.weather-day {
+  position: relative;
+}
 .icon-next-days {
   font-size: 30px;
+  position: relative;
+  right: 30px;
+  bottom: 10px;
+}
+.temperature-next-days {
+  position: relative;
+  bottom: 20px;
 }
 .footer {
   font-size: 10px;
