@@ -20,6 +20,24 @@ if (min < 10) {
 }
 currentTime.innerHTML = `${day}, ${hours}:${min}`;
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row">`;
+  let forecastDays = ["Sat", "Sun", "Mon", "Tue", "Wed"];
+  forecastDays.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col-2">
+            <div class="weather-day">${day}
+               <img class="icon-next-days" src="http://openweathermap.org/img/wn/10d@2x.png" id="icon" alt="Icon" /> 
+              <div class="temperature-next-days"> 35ºc</div>
+            </div></div>`;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function search(cityInput) {
   let apiKey = "c4d36cc9101ca41ceee2cff31c436ac9";
   let units = "metric";
@@ -55,6 +73,9 @@ function newWeather(response) {
   document.querySelector("#clouds").innerHTML = Math.round(
     response.data.clouds.all
   );
+
+  displayForecast();
+
   function changeCelcius(event) {
     event.preventDefault();
     let celciusInput = document.querySelector("#just-temp");
